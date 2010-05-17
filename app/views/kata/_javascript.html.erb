@@ -157,49 +157,6 @@ function everyoneElsePage()
   window.open("/kata/see_all_increments/<%=h @dojo.id -%>?kata_id=<%=CGI::escape(@kata.id) -%>");
 }
 
-document.observe('dom:loaded', function() {
-  <% if !@kata.readonly -%>
-    setupMenu();
-  <% end -%>
-})
-
-function setupMenu()
-{
-  var editorMenuItems = [
-    {
-      name: 'See how everyone else is doing ',
-      className: 'go-to-everyone-else-page', 
-      callback: function(e) { everyoneElsePage(); }
-    },{
-      name: 'Go to the Cyber-Dojo home page  ',
-      className: 'go-to-home-page', 
-      callback: function(e) { homePage(); }
-    },{
-      separator: true
-    },{
-      separator: true
-    },{
-      name: 'Create a new file...  ',
-      className: 'create-a-new-file', 
-      callback: function(e) { newFile(); }
-    },{
-      name: 'Rename this file...  ',
-      className: 'rename-this-file', 
-      callback: function(e) { renameCurrentFile(); }
-    },{
-      name: 'Delete this file...  ', 
-      className: 'delete-this-file',
-      callback: function(e) { deleteCurrentFile(); }
-    }
-  ]
-
-  new Proto.Menu({
-    selector: '#editor', 
-    className: 'menu desktop', // (can be used for css styling)
-    menuItems: editorMenuItems
-  })
-}
-
 function atLoad()
 {
    loadFile('kata.sh');
