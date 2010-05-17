@@ -1,6 +1,9 @@
-<% increment = @increments.last %>
-<div class="color_bar <%= increment[:outcome] %>">&nbsp;</div>
-<textarea class="results"><%= increment[:info].gsub("<br/>", "\n") %></textarea>
+<% if increment = @increments.last %>
+  <div class="color_bar <%= increment[:outcome] %>">&nbsp;</div>
+  <div class="padding">
+    <textarea class="results"><%= increment[:info].gsub("<br/>", "\n") %></textarea>
+  </div>
+<% end %>
 
 <div id="increments">
   <%= render :partial => 'increments' -%>

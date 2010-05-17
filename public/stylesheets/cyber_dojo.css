@@ -1,12 +1,14 @@
-
 body {
   margin: 0;
   border-style: none;
   background-color: #FFE4C4; /*bisque*/
   color: green;
+  overflow: hidden;
 }
 
-/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -*/
+.padding {
+  padding: 10px;
+}
 
 .rounded
 { 
@@ -26,10 +28,12 @@ body {
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -*/
 
-.increment 
-{ 
+.increment { 
   padding: 0.15em; 
   font-size: 10pt;
+  display: block;
+  height: 12px;
+  margin-top: 3px;
 }
 
 .failed_prediction { border: 4px solid #F33; } /*red*/
@@ -187,13 +191,18 @@ body {
   height: 25px;
 }
 
+#results_panel .padding {
+  padding: 0 6px 0 10px;
+}
+
 #results_panel .results {
-  width: 99%;
-  height: 150px;
+  width: 100%;
+  height: 147px;
   border: none;
   margin: 0;
 }
 
 #results_panel #increments {
-  height: 25px;
+  height: 28px;
+  background-color: #aaa;
 }
