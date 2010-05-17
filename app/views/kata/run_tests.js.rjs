@@ -1,3 +1,1 @@
-
-page.replace_html 'increments', :partial => 'increments';
-
+page.replace_html "results_panel", :partial => "results_panel"

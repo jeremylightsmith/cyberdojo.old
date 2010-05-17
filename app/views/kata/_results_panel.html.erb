@@ -1,0 +1,7 @@
+<% increment = @increments.last %>
+<div class="color_bar <%= increment[:outcome] %>">&nbsp;</div>
+<textarea class="results"><%= increment[:info].gsub("<br/>", "\n") %></textarea>
+
+<div id="increments">
+  <%= render :partial => 'increments' -%>
+</div>

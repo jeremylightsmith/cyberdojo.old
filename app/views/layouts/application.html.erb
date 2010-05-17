@@ -7,18 +7,12 @@
     <title><%=@title-%></title>  
     <link rel="shortcut icon" href="http://www.jaggersoft.com/favicon.ico">
     <link rel="icon"          href="http://www.jaggersoft.com/animated_favicon.gif"  type="image/gif" />
-    <%= stylesheet_link_tag :all -%> 
+    <%= stylesheet_link_tag "reset", "proto.menu.0.6.css", "cyber_dojo" -%> 
     <%= javascript_include_tag :all -%>
   </head>
 
   <body id="cyber_dojo_page">
-    <table>
-      <tr>
-       <td width="5%"></td>
-       <td width="90%"><%= yield -%></td>
-       <td width="5%"></td>
-      </tr>
-    </table>
+    <%= yield %>
   </body>
 </html>
 

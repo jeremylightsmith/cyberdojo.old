@@ -1,5 +1,6 @@
-
 <%= render :partial => 'javascript' -%>
+
+<%= render :partial => "menu_bar" %>
 
 <% form_remote_tag :url => { :action   => 'run_tests',
                              :dojo_id => @dojo.id,
@@ -8,11 +9,11 @@
                            }, 
                              :before   => "preRunTests();",
                              :complete => "postRunTests();" do -%> 
-
-<%= render :partial => 'increments_panel' -%>
 <%= render :partial => 'editor_panel' -%>
-
 <% end -%>
 
+<div id="results_panel">
+  <%= render :partial => 'results_panel'-%>
+</div>
 
 

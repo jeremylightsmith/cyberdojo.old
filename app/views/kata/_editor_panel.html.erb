@@ -1,16 +1,12 @@
 
-<table cellpadding="0">
-  <tr valign="top">
-    <td id="file_manager" 
-        class="rounded panel">
-      <%= render :partial => 'avatar_buttons' -%>
-      <%= render :partial => 'file_list' -%>
-    </td>
-    <td>
-      <%= render :partial => 'editor' -%>
-    </td>
-  </tr>
-</table>
+<div id="file_manager">
+  <%= render :partial => 'avatar_buttons' -%>
+  <%= render :partial => 'file_list' -%>
+</div>
+
+<div id="editor_panel">
+  <%= render :partial => 'editor' -%>  
+</div>
 
 <%= render :partial => 'hidden_text_areas' -%>
 
