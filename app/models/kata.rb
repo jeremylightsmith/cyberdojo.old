@@ -4,7 +4,7 @@ class Kata
   def initialize(dojo, id, name = "", readonly = false)
     @dojo = dojo
     @id = id
-    @manifest = eval IO.read(folder + '/' + 'kata_manifest.rb')
+    @manifest = eval(IO.read(folder + '/' + 'kata_manifest.rb')) || raise("Invalid or missing manifest : #{folder}/kata_manifest.rb")
     @file_set = KataFileSet.new(self)
     @avatar = Avatar.new(self, name) if name != ""
     @readonly = readonly

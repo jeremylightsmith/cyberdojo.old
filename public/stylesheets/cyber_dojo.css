@@ -124,6 +124,7 @@ a.increment:hover span /*the span will display just on :hover state*/
   background-color: #686868;
   border: 1px solid #666;
   border-right: none;
+  padding-left: 0px;
 }
 
 .textarea_with_line_numbers {
@@ -134,7 +135,7 @@ a.increment:hover span /*the span will display just on :hover state*/
   text-align: right;
   padding-right: 0.2em;
   position: absolute;
-  top:0;left:0;bottom:0;
+  top:0;left:-45px;bottom:0;
   display: block;
   font-size: 12pt;
   font-weight: 100;
@@ -173,11 +174,12 @@ body {
   position: absolute;
   top: 30px; left: 200px; right: 0; bottom: 200px;
   overflow: hidden;
+  background-color: #686868;
 }
 
 .editor_container {
   position: absolute;
-  top: 0; left: 40px; right: 2px; bottom: 0px;
+  top: 0; left: 45px; right: 2px; bottom: 0px;
 }
 
 #results_panel {

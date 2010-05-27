@@ -8,12 +8,12 @@ class DojoController < ApplicationController
   end
 
   def choose_dojo
-    @dojos = Dir.entries('dojos').select { |d| d != "." and d != ".." }
+    @dojos = visible_files('dojos')
   end
 
   def choose_kata
     @dojo_id = params[:dojo_id]
-    @katas = Dir.entries("dojos/#{@dojo_id}").select { |d| d != "." and d != ".." }
+    @katas = visible_files("dojos/#{@dojo_id}")
   end
 
   def choose_avatar
@@ -23,4 +23,9 @@ class DojoController < ApplicationController
     @title = "Cyber Dojo"
   end
 
+  private
+  
+  def visible_files(path)
+    Dir.entries(path).reject {|file| file =~ /^\./ }
+  end
 end
